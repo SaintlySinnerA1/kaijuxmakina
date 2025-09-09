@@ -93,10 +93,33 @@ post-title,.post-title a{color:var(--accent)}
 .post-title{ text-align:center }
 .doc-block h2{ text-align:center }
 }
+/* Homepage-only styling */
+.home main {
+  margin-top: 3rem;       /* space below header */
+  margin-bottom: 4rem;    /* space above footer */
+  text-align: center;     /* center-align content */
+}
+
+.home .post-body p {
+  margin: 1.5rem 0;
+  line-height: 1.9;
+}
+
+.home header {
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.home main img {
+  margin: 2rem auto;
+  display: block;
+}
 
 /* Simple mobile niceties since you’re not using a separate mobile theme */
 @media (max-width: 480px){
   :root{ --base:18px; --maxw:92vw; }
   .brand{font-size:1.75rem}
 }
+
 
