@@ -120,6 +120,15 @@ footer{max-width:var(--maxw);margin:2rem auto 3rem;padding:0 1rem;text-align:cen
   }
 }
 
+/* Center Story page placeholder */
+.story .post-body {
+  display: flex;
+  align-items: center;    /* vertical center */
+  justify-content: center; /* horizontal center */
+  min-height: 200px;      /* give it some height so centering shows */
+  text-align: center;
+}
+
 
 
 
