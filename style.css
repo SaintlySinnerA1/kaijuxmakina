@@ -89,9 +89,14 @@ footer{max-width:var(--maxw);margin:2rem auto 3rem;padding:0 1rem;text-align:cen
   color:#a0a0a0;
   text-align:center;
 }
+post-title,.post-title a{color:var(--accent)}
+.post-title{ text-align:center }
+.doc-block h2{ text-align:center }
+}
 
 /* Simple mobile niceties since you’re not using a separate mobile theme */
 @media (max-width: 480px){
   :root{ --base:18px; --maxw:92vw; }
   .brand{font-size:1.75rem}
 }
+
