@@ -29,7 +29,7 @@ nav a:hover{color:var(--accent)}
 .divider{height:1px;background:var(--line);margin:0 auto;border:0;max-width:var(--maxw)}
 
 main{max-width:var(--maxw);margin:2rem auto;padding:0 1rem}
-.post-title,.post-title a{color:var(--accent);font-size:1.6rem;font-weight:800;margin:0 0 .25rem}
+.post-title, .post-title a{color:var(--accent);font-size:1.6rem;font-weight:800;margin:0 0 .25rem}
 .post-body p{margin:1rem 0}
 .post-footer{color:var(--muted);font-size:.9rem;margin-top:1rem}
 .post-outer + .post-outer{border-top:1px solid var(--line);margin-top:2rem;padding-top:2rem}
@@ -121,6 +121,7 @@ post-title,.post-title a{color:var(--accent)}
   :root{ --base:18px; --maxw:92vw; }
   .brand{font-size:1.75rem}
 }
+
 
 
 
