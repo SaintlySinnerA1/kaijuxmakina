@@ -88,7 +88,7 @@ footer{max-width:var(--maxw);margin:2rem auto 3rem;padding:0 1rem;text-align:cen
 /* Homepage-only */
 .home main{margin-top:3rem;margin-bottom:4rem;text-align:center}
 .home .about-text{ /* left-aligned article column */
-  text-align:justify;
+  text-align:center;
   margin:0 auto;
   max-width:800px;
 }
@@ -99,6 +99,7 @@ footer{max-width:var(--maxw);margin:2rem auto 3rem;padding:0 1rem;text-align:cen
   :root{ --base:18px; --maxw:92vw; }
   .brand{font-size:1.75rem}
 }
+
 
 
 
