@@ -7,7 +7,7 @@
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="docs">
   <header>
     <h1 class="brand"><a class="brand-link" href=".">KaijuXMakina</a></h1>
     <nav>
@@ -21,21 +21,57 @@
   <main>
     <section class="panel">
       <h2>Documents</h2>
-      <p>Central archive for KaijuXMakina.</p>
-      <ul class="doc-list">
-        <li><strong>File 01</strong> — Kaiju Emergence Log</li>
-        <li><strong>File 02</strong> — Makina Deployment Notes</li>
-        <li><strong>File 03</strong> — Cult-State Surveillance Reports</li>
-      </ul>
+
+      <details class="fold" open>
+        <summary>Kaiju Emergence Logs</summary>
+        <ul class="doc-list">
+          <li><strong>Log 01</strong> — Coastal Breach A3</li>
+          <li><strong>Log 02</strong> — Seismic Pattern Drift</li>
+          <li><strong>Log 03</strong> — Inland Spore Events</li>
+        </ul>
+      </details>
+
+      <details class="fold">
+        <summary>Makina Deployment Notes</summary>
+        <ul class="doc-list">
+          <li><strong>Note A1</strong> — Pathfinder Squad Tactics</li>
+          <li><strong>Note B7</strong> — Heat Saturation Windows</li>
+          <li><strong>Note C2</strong> — ATGM Loadouts</li>
+        </ul>
+      </details>
+
+      <details class="fold">
+        <summary>Cult-State Surveillance</summary>
+        <ul class="doc-list">
+          <li><strong>SR-12</strong> — Rite Interference Risks</li>
+          <li><strong>SR-19</strong> — Coastal Processions</li>
+          <li><strong>SR-23</strong> — Oracle Cell Mapping</li>
+        </ul>
+      </details>
+
+      <!-- Optional: Expand/Collapse all -->
+      <div class="fold-controls">
+        <button type="button" id="expandAll">Expand all</button>
+        <button type="button" id="collapseAll">Collapse all</button>
+      </div>
     </section>
   </main>
 
   <hr class="divider">
   <footer>© KaijuXMakina — Classified Materials.</footer>
+
+  <script>
+    // tiny helper for the buttons; safe on GitHub Pages
+    (function(){
+      const folds = Array.from(document.querySelectorAll('details.fold'));
+      const xp = document.getElementById('expandAll');
+      const cp = document.getElementById('collapseAll');
+      if (xp) xp.addEventListener('click', () => folds.forEach(d => d.open = true));
+      if (cp) cp.addEventListener('click', () => folds.forEach(d => d.open = false));
+    })();
+  </script>
 </body>
 </html>
-
-
 
 
 
