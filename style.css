@@ -100,20 +100,27 @@ footer{max-width:var(--maxw);margin:2rem auto 3rem;padding:0 1rem;text-align:cen
   .brand{font-size:1.75rem}
 }
 
-.home .logo{
+.home .logo {
   margin: 2rem auto 1.5rem;
-  width: 70%;               /* 30% smaller than full */
-  max-width: 364px;         /* 70% of 520px */
+  width: 40%;          /* small on desktop */
+  max-width: 208px;    /* 40% of the old 520px cap */
 }
 
-.home .logo img{
-  display:block;
-  width:100%;
-  height:auto;
-  background:#111;
-  border:1px solid var(--line);
-  box-shadow:0 0 12px rgba(0,0,0,.6);
+.home .logo img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
+
+/* Let the hero logo grow on small screens */
+@media (max-width: 480px) {
+  .home .logo {
+    width: 80%;        /* much bigger on mobile */
+    max-width: none;   /* remove the hard cap */
+  }
+}
+
+
 
 
 
