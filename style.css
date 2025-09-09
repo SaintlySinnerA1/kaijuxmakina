@@ -141,9 +141,6 @@ header{
   border-bottom: 2px solid var(--accent);
 }
 
-/* make all H2 page titles red */
-.post-title, .post-title a{ color: var(--accent); }
-
 /* reusable “bubble” panel */
 .panel{
   background: var(--panel);
@@ -153,12 +150,7 @@ header{
   box-shadow: 0 0 12px rgba(0,0,0,.6);
   margin: 2rem auto;
   max-width: var(--maxw);
-}
 
-/* homepage layout: center header/logo, left-align About text */
-.home main{ margin-top: 3rem; margin-bottom: 4rem; text-align: center; }
-.home .about-text{ text-align: left; margin: 0 auto; max-width: 800px; }
-.home .about-text p{ margin: 1.25rem 0; line-height: 1.9; }
 
 
 
