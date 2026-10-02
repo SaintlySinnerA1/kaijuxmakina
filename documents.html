@@ -6,6 +6,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="assets/favicon.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* A self-contained reader for archive entries. */
+    .log-entry > summary {
+      display: list-item;
+      list-style: disclosure-closed;
+      padding: .4rem .25rem;
+      font-weight: 400;
+      letter-spacing: normal;
+      color: var(--ink);
+      cursor: pointer;
+    }
+    .log-entry[open] > summary { list-style: disclosure-open; }
+    .log-entry > summary::-webkit-details-marker { display: inline; }
+    .log-entry > summary::before { content: none; }
+    .log-entry > summary:hover { color: var(--accent); }
+    .log-entry > summary:focus-visible,
+    .incident-reader:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+    .incident-reader {
+      max-height: min(32rem, 60vh);
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+      scrollbar-gutter: stable;
+      scrollbar-color: var(--accent) #121212;
+      padding: 1.25rem;
+      margin: .75rem 0 1rem;
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      background: var(--bg);
+      overflow-wrap: anywhere;
+      font-size: .95rem;
+      line-height: 1.75;
+    }
+    .incident-reader .incident-heading {
+      text-align: left;
+      background: transparent;
+      padding: 0 0 1rem;
+      margin: 0 0 1rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .incident-reader h3 { color: var(--accent); font-size: 1.15rem; margin: .5rem 0; }
+    .incident-reader h4 {
+      color: var(--accent);
+      font-size: 1rem;
+      margin: 1.75rem 0 .75rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+    }
+    .incident-reader blockquote {
+      margin: 1rem 0;
+      padding: .25rem 0 .25rem 1rem;
+      border-left: 3px solid var(--accent);
+      color: #d0d0d0;
+    }
+    @media (max-width: 480px) {
+      .docs .panel { padding: 1rem; }
+      .docs .fold .doc-list { margin-left: 0; padding-left: 1rem; }
+      .incident-reader { padding: .85rem; }
+    }
+  </style>
 </head>
 <body class="docs">
   <header>
@@ -25,7 +87,115 @@
       <details class="fold" open>
         <summary>Kaiju Emergence Logs</summary>
         <ul class="doc-list">
-          <li><strong>Log 01</strong> — Coastal Breach A3</li>
+          <li>
+            <details class="log-entry">
+              <summary><strong>Log 01</strong> — Coastal Breach A3</summary>
+              <article class="incident-reader" tabindex="0" aria-labelledby="a3-title">
+<header class="incident-heading">
+<p><strong>COALITION COASTAL DEFENSE AUTHORITY</strong></p>
+<h3 id="a3-title">INCIDENT LOG 01 — COASTAL BREACH A3</h3>
+<p><strong>Status:</strong> Closed pending review<br>
+<strong>Location:</strong> A3 Seawall / South Evacuation Corridor<br>
+<strong>Recovered from:</strong> Pathfinder Command, Recorder Two</p>
+</header>
+<h4>03:11 — FIRST CONTACT</h4>
+<p>The offshore array registered a displacement eighteen kilometers east of the seawall.</p>
+<p>At first, operators attributed the reading to a collapsed shelf. Category 10 rain had already disabled two stations and submerged the maintenance platform at A6. The surviving instruments were returning contradictory depths.</p>
+<p>Then the displacement moved against the current.</p>
+<p>Three Makinas were assigned to A3: Pathfinder units <strong>Warden</strong>, <strong>Latch</strong>, and <strong>Mercy</strong>. Their standing orders were to preserve the south corridor until evacuation was complete.</p>
+<p>Thirty-eight civilian transports remained inside the district.</p>
+<h4>03:19 — VISUAL CONFIRMATION</h4>
+<p>A surveillance aircraft recorded eleven seconds of usable footage before losing transmission.</p>
+<p>The footage showed a raised structure moving through the water. Analysts initially identified it as a dorsal ridge. Its dimensions could not be established because the rain concealed both ends.</p>
+<p>The aircraft’s final transmission was:</p>
+<blockquote><p>“That isn’t its back. It’s holding something above the water.”</p></blockquote>
+<p>No further contact was received.</p>
+<h4>03:24 — DEFENSIVE REPOSITIONING</h4>
+<p>Command ordered Warden and Latch onto the eastern firing platforms. Mercy remained beside the evacuation gates.</p>
+<p>The offshore contact stopped at fourteen kilometers.</p>
+<p>Thermal imaging showed no approach. Acoustic readings indicated continuous movement beneath the surface, but operators could not separate it from debris striking the submerged seawall.</p>
+<p>At 03:27, a structural alarm activated under Platform Four.</p>
+<p>Latch reached the platform six minutes later. The alarm ceased before inspection began.</p>
+<h4>03:36 — SECOND IMPACT</h4>
+<p>A second alarm activated beneath the pumping station.</p>
+<p>Warden was redirected south. Latch held Platform Four. Mercy reported that water was rising through street drains behind the wall.</p>
+<p>The pumping station had been isolated from the district drainage network at 02:50.</p>
+<p>Maintenance attributed the flooding to a failed isolation gate.</p>
+<p>At 03:39, the offshore contact moved north.</p>
+<p>Command shifted Latch to intercept.</p>
+<p>At 03:40, Platform Four collapsed.</p>
+<h4>03:44 — ANALYST OBSERVATION</h4>
+<p>Junior acoustic analyst Irena Vale requested suspension of all repositioning orders.</p>
+<p>Her request was denied.</p>
+<p>Vale submitted a comparison of structural impacts and command dispatches. Each impact had occurred beneath a position scheduled to be vacated. In two cases, the impact preceded transmission of the order.</p>
+<p>The interval was between four and seven minutes.</p>
+<blockquote>
+<p><strong>VALE:</strong> “It’s striking the places we’re about to leave.”</p>
+<p><strong>COMMAND:</strong> “Are you reporting a compromised channel?”</p>
+<p><strong>VALE:</strong> “I don’t know what I’m reporting.”</p>
+</blockquote>
+<p>Command switched to a reserve encryption system.</p>
+<p>No change in the impact pattern was observed.</p>
+<h4>03:51 — CORRIDOR FAILURE</h4>
+<p>The first rupture occurred beneath Transport Twenty-Six.</p>
+<p>Witnesses described the road lifting before it broke. The transport rolled onto its side. Water entered through the opening with sufficient force to carry sections of pavement inland.</p>
+<p>Mercy’s pilot, Lieutenant Sera Venn, reported movement beneath the corridor.</p>
+<blockquote>
+<p><strong>MERCY:</strong> “I have contact inside the wall.”</p>
+<p><strong>COMMAND:</strong> “Confirm location.”</p>
+<p><strong>MERCY:</strong> “Under my feet.”</p>
+</blockquote>
+<p>The remaining transports were ordered onto the service ramp. Warden returned from the pumping station to clear wreckage from the intersection.</p>
+<p>Latch fired on the offshore contact.</p>
+<p>Neither round produced an observable response.</p>
+<h4>03:54 — UNAUTHORIZED ACTION</h4>
+<p>Mercy moved into the rupture.</p>
+<p>Cockpit telemetry indicates that Venn drove the machine’s right leg into the exposed foundation, rotated its torso across the opening, and engaged both ground anchors.</p>
+<p>The position exceeded the chassis’s permitted load.</p>
+<p>Command ordered her to withdraw.</p>
+<blockquote>
+<p><strong>MERCY:</strong> “The buses are still moving.”</p>
+<p><strong>COMMAND:</strong> “Your anchors will shear.”</p>
+<p><strong>MERCY:</strong> “Then stop talking on this channel and get them out.”</p>
+</blockquote>
+<p>Water levels in the corridor fell for ninety seconds.</p>
+<p>Nine transports reached the service ramp during that interval.</p>
+<h4>03:56 — CLOSE CONTACT</h4>
+<p>Latch reported a pale surface rising beneath Mercy’s left arm.</p>
+<p>The pilot described it as an unmarked plate approximately the width of the evacuation road. It appeared briefly, submerged, and reappeared closer to the machine.</p>
+<p>Latch fired three rounds into it.</p>
+<p>The third round struck.</p>
+<p>Audio recovered from Mercy contains a low-frequency vibration followed by repeated cockpit pressure warnings. Venn reported that the contact was pulling against the ground anchors.</p>
+<p>Warden attempted to secure Mercy with a recovery cable.</p>
+<p>The cable parted at the attachment point.</p>
+<h4>03:58 — FINAL TRANSPORT</h4>
+<p>Transport Thirty-Eight cleared the service ramp at 03:58:17.</p>
+<p>Mercy’s left anchor failed four seconds later.</p>
+<p>The machine rotated toward the sea. Venn discharged its remaining close-defense charges beneath the torso. The resulting pressure wave damaged Warden’s forward cameras and interrupted all local acoustic monitoring.</p>
+<p>Mercy’s last intelligible transmission was:</p>
+<blockquote><p>“There’s a space down here.”</p></blockquote>
+<p>Her cockpit beacon continued transmitting for eleven minutes.</p>
+<p>Recovery teams have not located the chassis.</p>
+<h4>04:02 — OFFSHORE WITHDRAWAL</h4>
+<p>The offshore contact began moving east.</p>
+<p>It had remained beyond the seawall’s engagement boundary throughout the incident.</p>
+<p>Latch pursued it along the surviving platforms until command ordered withdrawal. The pilot reported that the raised structure seen by the surveillance aircraft had lowered into the water.</p>
+<p>The coastal array recorded no further contact.</p>
+<p>Rain intensity decreased at 04:16.</p>
+<h4>POST-INCIDENT FINDINGS</h4>
+<p>All thirty-eight civilian transports were accounted for outside the district. Confirmed losses include the A3 seawall, two pumping stations, four kilometers of roadway, and Pathfinder unit Mercy.</p>
+<p>Foundation cores recovered from the breach showed smooth internal cavities below the original seawall footings. Mineral deposits along their surfaces indicate prolonged exposure to seawater.</p>
+<p>The cavities do not appear in construction surveys.</p>
+<p>Their full extent remains undetermined.</p>
+<p>Vale’s timing analysis has been retained in the restricted appendix. Investigators found no evidence that deployment orders were intercepted. The correspondence between planned movements and structural impacts remains unexplained.</p>
+<p>Personnel assigned to adjacent sectors have reported intermittent knocking beneath their maintenance galleries.</p>
+<p>They have been instructed to log the sounds without approaching them.</p>
+<h4>INVESTIGATOR’S NOTE</h4>
+<p>A3 was designated a coastal breach. That classification assumes the enemy began outside the perimeter.</p>
+<p>We can no longer support that assumption.</p>
+              </article>
+            </details>
+          </li>
           <li><strong>Log 02</strong> — Seismic Pattern Drift</li>
           <li><strong>Log 03</strong> — Inland Spore Events</li>
         </ul>
