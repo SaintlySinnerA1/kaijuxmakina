@@ -2,85 +2,26 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Documents</title>
+  <title>Documents — KaijuXMakina</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="assets/favicon.png" type="image/png">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="description" content="Explore recovered incident logs, Makina deployment notes, and surveillance reports from KaijuXMakina.">
+  <meta name="color-scheme" content="dark">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* A self-contained reader for archive entries. */
-    .doc-list > .log-item { list-style: none; }
-    .log-entry > summary {
-      display: list-item;
-      list-style: disc;
-      padding: .4rem .25rem;
-      font-weight: 400;
-      letter-spacing: normal;
-      color: var(--ink);
-      cursor: pointer;
-    }
-    .log-entry > summary::-webkit-details-marker { display: none; }
-    .log-entry > summary::before { content: none; }
-    .log-entry > summary:hover { color: var(--accent); }
-    .log-entry > summary:focus-visible,
-    .incident-reader:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 4px;
-    }
-    .incident-reader {
-      max-height: min(32rem, 60vh);
-      overflow-y: auto;
-      overscroll-behavior-y: contain;
-      scrollbar-gutter: stable;
-      scrollbar-color: var(--accent) #121212;
-      padding: 1.25rem;
-      margin: .75rem 0 1rem;
-      border: 1px solid var(--accent);
-      border-radius: 8px;
-      background: var(--bg);
-      overflow-wrap: anywhere;
-      font-size: .95rem;
-      line-height: 1.75;
-    }
-    .incident-reader .incident-heading {
-      text-align: left;
-      background: transparent;
-      padding: 0 0 1rem;
-      margin: 0 0 1rem;
-      border-bottom: 1px solid var(--line);
-    }
-    .incident-reader h3 { color: var(--accent); font-size: 1.15rem; margin: .5rem 0; }
-    .incident-reader h4 {
-      color: var(--accent);
-      font-size: 1rem;
-      margin: 1.75rem 0 .75rem;
-      padding-top: 1rem;
-      border-top: 1px solid var(--line);
-    }
-    .incident-reader blockquote {
-      margin: 1rem 0;
-      padding: .25rem 0 .25rem 1rem;
-      border-left: 3px solid var(--accent);
-      color: #d0d0d0;
-    }
-    @media (max-width: 480px) {
-      .docs .panel { padding: 1rem; }
-      .docs .fold .doc-list { margin-left: 0; padding-left: 1rem; }
-      .incident-reader { padding: .85rem; }
-    }
-  </style>
 </head>
 <body class="docs">
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <header>
     <h1 class="brand"><a class="brand-link" href=".">KaijuXMakina</a></h1>
-    <nav>
-      <a href="./story">Story</a>
-      <a href="./documents">Documents</a>
-      <a href="./gallery">Gallery</a>
+    <nav aria-label="Main navigation">
+      <a href="./story.html">Story</a>
+      <a href="./documents.html" aria-current="page">Documents</a>
+      <a href="./gallery.html">Gallery</a>
     </nav>
   </header>
   <hr class="divider">
 
-  <main>
+  <main id="main-content" tabindex="-1">
     <section class="panel">
       <h2>Documents</h2>
 
@@ -89,7 +30,7 @@
         <ul class="doc-list">
           <li class="log-item">
             <details class="log-entry">
-              <summary><strong>Log 01</strong> — Coastal Breach A3</summary>
+              <summary><span class="log-bullet" aria-hidden="true">•</span><strong>Log 01</strong> — Coastal Breach A3</summary>
               <article class="incident-reader" tabindex="0" aria-labelledby="a3-title">
 <header class="incident-heading">
 <p><strong>COALITION COASTAL DEFENSE AUTHORITY</strong></p>
@@ -231,9 +172,9 @@
   <footer>© KaijuXMakina — Classified Materials.</footer>
 
   <script>
-    // tiny helper for the buttons; safe on GitHub Pages
+    // Expand and collapse both archive folders and their entries.
     (function(){
-      const folds = Array.from(document.querySelectorAll('details.fold'));
+      const folds = Array.from(document.querySelectorAll('details.fold, details.log-entry'));
       const xp = document.getElementById('expandAll');
       const cp = document.getElementById('collapseAll');
       if (xp) xp.addEventListener('click', () => folds.forEach(d => d.open = true));
@@ -242,13 +183,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
