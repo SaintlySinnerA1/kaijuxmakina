@@ -8,17 +8,17 @@
   <link rel="stylesheet" href="style.css">
   <style>
     /* A self-contained reader for archive entries. */
+    .doc-list > .log-item { list-style: none; }
     .log-entry > summary {
       display: list-item;
-      list-style: disclosure-closed;
+      list-style: disc;
       padding: .4rem .25rem;
       font-weight: 400;
       letter-spacing: normal;
       color: var(--ink);
       cursor: pointer;
     }
-    .log-entry[open] > summary { list-style: disclosure-open; }
-    .log-entry > summary::-webkit-details-marker { display: inline; }
+    .log-entry > summary::-webkit-details-marker { display: none; }
     .log-entry > summary::before { content: none; }
     .log-entry > summary:hover { color: var(--accent); }
     .log-entry > summary:focus-visible,
@@ -87,7 +87,7 @@
       <details class="fold" open>
         <summary>Kaiju Emergence Logs</summary>
         <ul class="doc-list">
-          <li>
+          <li class="log-item">
             <details class="log-entry">
               <summary><strong>Log 01</strong> — Coastal Breach A3</summary>
               <article class="incident-reader" tabindex="0" aria-labelledby="a3-title">
